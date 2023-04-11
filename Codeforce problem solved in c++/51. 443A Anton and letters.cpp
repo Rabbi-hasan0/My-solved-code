@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int count2=0,a=0;
+    string s;
+    getline(cin,s);
+    sort(s.begin(),s.end());
+    for(int i=0; i<s.size(); i++)
+    {
+        if(s[i]==','||s[i]=='{'||s[i]=='}'||s[i]==' ')
+        {
+            a++;
+        }
+        else if(s[i]!=s[i+1])
+        {
+            count2++;
+        }
+    }
+    cout<<count2<<"\n";
+    return 0;
+}
+
